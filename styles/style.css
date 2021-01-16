@@ -1,0 +1,133 @@
+/* CSS Reset */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* utility classes */
+
+
+.btn{
+    border-style: none;
+    border-radius: 5rem;
+    padding: 1.2rem 5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: large;
+    color: hsl(257, 40%, 49%);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: hsl(300, 69%, 71%);
+    color: white;
+}
+
+
+/* body */
+
+
+body{
+    background-image: url(../images/bg-desktop.svg);
+    /* background-repeat: no-repeat; */
+    background-color:hsl(257, 40%, 49%);
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+}
+
+.logo{
+    height: 20vh;
+}
+.logo img{
+    position: relative;
+    top: 50%;
+    transform: translatey(-60%);
+    width: 15rem;
+}
+
+.content{
+    display: flex;
+    padding: 5px;
+}
+
+
+.info{
+    color: white;
+    padding: 2.5rem;
+}
+
+.info h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2.8rem;
+}
+
+.info p{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 2rem;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.icons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icons svg{
+    height: 2.8rem;
+    align-self:center;
+    margin: 0.5rem;
+    background: none;
+    fill: white;
+}
+
+.icons svg:hover{
+    fill: hsl(300, 69%, 71%);
+    cursor: pointer;
+}
+
+@media(max-width: 1024px)
+{
+    .content{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }   
+     
+    .logo img{
+        position: relative;
+        top: 50%;
+        transform: translatey(-50%);
+        width: 15rem;
+        max-width: 90vw;
+    }
+
+    .info{
+        color: white;
+        max-width: 90vw;
+    }
+
+    .info h1{
+        font-size: 1.5rem;
+    }
+
+    .info p{
+        font-size: 1rem;
+    }
+    
+    .content img{
+        width: 90vw;
+    }
+
+    .icons{
+        justify-content: center;
+    }
+}
